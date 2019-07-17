@@ -7,6 +7,8 @@ OR
 
 Obtain an installation medium that already has it, such as the ALEZ installer (https://github.com/danboid/ALEZ).
 
+> __*NOTE:*__ Of course you could use the ALEZ installer itself, but the following tutorial will afford more control over the zpool setup, the choice of encryption, as well as being an opportunity to learn how all the pieces work together. 
+
 # Partitioning
 
 Boot from your chosen installation medium.
