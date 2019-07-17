@@ -263,7 +263,7 @@ reboot
 
 ZFS does not allow to use swapfiles, but users can use a ZFS volume (ZVOL) as swap. It is important to set the ZVOL block size to match the system page size, which can be obtained by the `getconf PAGESIZE` command (default on x86_64 is 4KiB). Another option useful for keeping the system running well in low-memory situations is not caching the ZVOL data.
 
-Create an 8 GiB zfs volume:
+For example, to create an 8 GiB zfs volume:
 ```bash
 zfs create -V 8G -b $(getconf PAGESIZE) -o logbias=throughput -o sync=always -o primarycache=metadata -o com.sun:auto-snapshot=false <pool>/swap
 ```
