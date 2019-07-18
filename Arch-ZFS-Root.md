@@ -9,6 +9,8 @@ Obtain an installation medium that already has it, such as the ALEZ installer (h
 
 > __*NOTE:*__ Of course you could use the ALEZ installer itself, but the following tutorial will afford more control over the zpool setup, the choice of encryption, as well as being an opportunity to learn how all the pieces work together. 
 
+> __*NOTE:*__ If you decide to customize your own ISO, then check out how to add the `archzfs` repo in `pacman.conf` -- https://github.com/archzfs/archzfs/wiki#using-the-archzfs-repository
+
 # Partitioning
 
 Boot from your chosen installation medium.
