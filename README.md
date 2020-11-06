@@ -1,10 +1,5 @@
 # Index
 
-## System Administration
-  - [Arch Linux ZFS root Install](SystemAdministration/Arch-ZFS-Root.md)
-    - non-encrypted or encrypted, using systemd-boot
-  - [Convert EXT4 to BTRFS](SystemAdministration/Convert-EXT4-to-BTRFS.md)
-
 ## Programming
 
 ### Nim
@@ -14,3 +9,8 @@
 
 ### Python
   - [Kivy - Buildozer](Programming/Python/Kivy/Buildozer-on-Arch.md)
+
+## System Administration
+  - [Arch Linux ZFS root Install](SystemAdministration/Arch-ZFS-Root.md)
+    - non-encrypted or encrypted, using systemd-boot
+  - [Convert EXT4 to BTRFS](SystemAdministration/Convert-EXT4-to-BTRFS.md)
