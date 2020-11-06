@@ -1,6 +1,3 @@
-# notes
-Some notes
-
 # Index
 
 ## System Administration
