@@ -5,6 +5,7 @@
   - [Nim vs Crystal - Part 3 - Crypto, DApps & P2P [by Robin Percy]](https://framework.embarklabs.io/news/2019/11/28/nim-vs-crystal-part-3-cryto-dapps-p2p/)
   - [Nim Manual - User Defined Pragmas](https://nim-lang.org/docs/manual.html#userminusdefined-pragmas)
   - [Nim Manual - Compile Pragma](https://nim-lang.org/docs/manual.html#implementation-specific-pragmas-compile-pragma)
+  - [Nim Manual - Exportc pragma](https://nim-lang.org/docs/manual.html#foreign-function-interface-exportc-pragma)
 
 ## Load a dynamic library (.so | .dll)
 
@@ -56,4 +57,25 @@ proc add(a, b: cint): cint {.importc.}
 
 when isMainModule:
   echo add(3, 7)  # 10
+```
+
+## Export C library from Nim
+
+### Nim Library
+```nim
+# export.nim
+proc add*(a,b:int): int {.exportc, dynlib.} =
+  a + b
+```
+
+### Import in Nim
+
+`lib` is prepended to the name of the library
+
+```nim
+# import.nim
+proc add(a,b:int): int {.importc, dynlib: "./libexport.so", importc: "add", cdecl.}
+
+when isMainModule:
+  echo add(1,3)
 ```
