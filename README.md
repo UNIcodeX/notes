@@ -7,6 +7,7 @@
     - [Load Dynamic Library](Programming/Nim/FFI/dynLib.nim)
     - [Import and Compile C Code](Programming/Nim/FFI/importc.nim)
     - [Export Dynamic Library](Programming/Nim/FFI/exportc.nim)
+  - [Custom Types](Programming/Nim/CustomTypes/customTypes.nim)
 
 ### Python
   - [Kivy - Buildozer](Programming/Python/Kivy/Buildozer-on-Arch.md)
