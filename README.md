@@ -10,11 +10,10 @@
   - [Threading](Programming/Nim/Threading/README.md)
     - [Without Locks (no side effect)](Programming/Nim/Threading/threadingWithoutLock.nim)
     - [With Locks (global variable mutated)](Programming/Nim/Threading/threadingWithLock.nim)
+  - [Pointers and References](Programming/Nim/pointersAndReferences.nim)
   - Types
     - [Custom Types](Programming/Nim/CustomTypes/customTypes.nim)
     - [Distinct Types](Programming/Nim/DistinctTypes/distinctTypes.nim)
-  - [Pointers and References](Programming/Nim/pointersAndReferences.nim)
-
 
 ### Python
   - [Kivy - Buildozer](Programming/Python/Kivy/Buildozer-on-Arch.md)
