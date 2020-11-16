@@ -8,9 +8,9 @@
     - [Import and Compile C Code](Programming/Nim/FFI/importc.nim)
     - [Export Dynamic Library](Programming/Nim/FFI/exportc.nim)
   - [Threading](Programming/Nim/Threading/README.md)
-    - [Without Locks (no side effect)](Programming/Nim/Threading/threadingWithoutLock.nim)
-    - [With Locks (global variable mutated)](Programming/Nim/Threading/threadingWithLock.nim)
-    - [With Locks and Pointers (global STRING variable mutated)](Programming/Nim/Threading/threadingPointer.nim)
+    - [No Variable Mutation](Programming/Nim/Threading/threadingNoMutate.nim)
+    - [Mutate Global Variable](Programming/Nim/Threading/threadingMutateGlobal.nim)
+    - [Mutate Using Pointer (Mutate String)](Programming/Nim/Threading/threatingMutatePointer.nim)
   - [Pointers and References](Programming/Nim/pointersAndReferences.nim)
   - Types
     - [Custom Types](Programming/Nim/CustomTypes/customTypes.nim)

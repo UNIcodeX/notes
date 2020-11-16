@@ -7,21 +7,15 @@ import os, locks
 
 var
   threadArray : array[4, Thread[int]]
-  global = 0
-  s : string
-  ps : ptr string
-  L: Lock
-
-ps = addr s
+  gInt        : int
+  L           : Lock
 
 proc worker(i:int) {.thread.} =
-  sleep 1000
-  echo "adding ", $i, " to `global`"
+  sleep 1
   acquire L
-  global += i
-  ps[].add $i
+  echo "adding ", $i, " to `gInt`"
+  gInt += i
   release L
-
 
 initLock(L)
 
@@ -30,5 +24,5 @@ for i in 0..threadArray.high:
 
 joinThreads(threadArray)
 
-echo "total is ", $global
-echo s
+echo ""
+echo "Global `gInt` is ", $gInt

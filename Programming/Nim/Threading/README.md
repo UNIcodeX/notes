@@ -1,5 +1,6 @@
 ## Threading
 
 ### Examples for using threads
-  - [Without Locks (no side effect)](threadingWithoutLock.nim)
-  - [With Locks (global variable mutated)](threadingWithLock.nim)
+  - [No Variable Mutation](threadingNoMutate.nim)
+  - [Mutate Global Variable](threadingMutateGlobal.nim)
+  - [Mutate Using Pointer (Mutate String)](threatingMutatePointer.nim)

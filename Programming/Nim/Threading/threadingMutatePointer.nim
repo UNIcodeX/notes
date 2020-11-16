@@ -1,4 +1,4 @@
-# nim c -r --threads:on
+# nim c -r --threads:on --gc:[arc|orc]
 
 ## Reference:
 ## https://nim-lang.org/docs/threads.html#examples
@@ -7,16 +7,20 @@ import os, locks
 
 var
   threadArray : array[4, Thread[int]]
-  global = 0
-  L: Lock
+  gInt        : int
+  s           : string
+  ps          : ptr string
+  L           : Lock
+
+ps = addr s
 
 proc worker(i:int) {.thread.} =
-  sleep 1
+  sleep 1000
+  echo "adding ", $i, " to `gInt`"
   acquire L
-  echo "adding ", $i, " to `global`"
-  global += i
+  gInt += i
+  ps[].add $i
   release L
-
 
 initLock(L)
 
@@ -25,4 +29,6 @@ for i in 0..threadArray.high:
 
 joinThreads(threadArray)
 
-echo "total is ", $global
+echo ""
+echo "Global `gInt` is ", $gInt
+echo "String `s` is ", s
