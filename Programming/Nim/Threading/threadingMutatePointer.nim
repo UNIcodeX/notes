@@ -3,7 +3,7 @@
 ## Reference:
 ## https://nim-lang.org/docs/threads.html#examples
 
-import os, locks
+import locks
 
 var
   threadArray : array[4, Thread[int]]
