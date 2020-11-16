@@ -10,7 +10,7 @@
   - [Threading](Programming/Nim/Threading/README.md)
     - [No Variable Mutation](Programming/Nim/Threading/threadingNoMutate.nim)
     - [Mutate Global Variable](Programming/Nim/Threading/threadingMutateGlobal.nim)
-    - [Mutate Using Pointer (Mutate String)](Programming/Nim/Threading/threatingMutatePointer.nim)
+    - [Mutate Using Pointer (Mutate String)](Programming/Nim/Threading/threadingMutatePointer.nim)
   - [Pointers and References](Programming/Nim/pointersAndReferences.nim)
   - Types
     - [Custom Types](Programming/Nim/CustomTypes/customTypes.nim)
