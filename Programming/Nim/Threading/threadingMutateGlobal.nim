@@ -3,7 +3,7 @@
 ## Reference:
 ## https://nim-lang.org/docs/threads.html#examples
 
-import locks
+import os, locks
 
 var
   threadArray : array[4, Thread[int]]
@@ -11,7 +11,7 @@ var
   L           : Lock
 
 proc worker(i:int) {.thread.} =
-  sleep 1
+  sleep 1000
   acquire L
   echo "adding ", $i, " to `gInt`"
   gInt += i
