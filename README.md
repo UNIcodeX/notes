@@ -9,9 +9,10 @@
     - [Export Dynamic Library](Programming/Nim/FFI/exportc.nim)
   - [General](Programming/Nim/General/README.md)
   - [Threading](Programming/Nim/Threading/README.md)
-    - [No Variable Mutation](Programming/Nim/Threading/threadingNoMutate.nim)
     - [Mutate Global Variable](Programming/Nim/Threading/threadingMutateGlobal.nim)
     - [Mutate Using Pointer (Mutate String)](Programming/Nim/Threading/threadingMutatePointer.nim)
+    - [No Variable Mutation](Programming/Nim/Threading/threadingNoMutate.nim)
+    - [Threaded Server with Prompt](Programming/Nim/Threading/threadedServerWithPrompt.nim)
   - [Pointers and References](Programming/Nim/pointersAndReferences.nim)
   - Types
     - [Custom Types](Programming/Nim/CustomTypes/customTypes.nim)
