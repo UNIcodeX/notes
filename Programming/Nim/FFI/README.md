@@ -7,6 +7,14 @@
   - [Nim Manual - Compile Pragma](https://nim-lang.org/docs/manual.html#implementation-specific-pragmas-compile-pragma)
   - [Nim Manual - Exportc pragma](https://nim-lang.org/docs/manual.html#foreign-function-interface-exportc-pragma)
 
+## Nimterop
+### Using nimterop to generate wrappers
+  - `nimble install nimterop`
+  - For example something like the follwing would allow you to generate a wrapper for openssl's blowfish implementation.
+    ```
+    # toast -pnkrs -E__ -F__ -c -I. -I./openssl --replace=BF_encrypt=BF_ENCRYPT,BF_decrypt=BF_DECRYPT .\openssl\blowfish.h > blowfish.nim
+    ```
+
 ## Load a dynamic library (.so | .dll)
 
 ### Nim
