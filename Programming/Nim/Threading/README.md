@@ -4,8 +4,9 @@
   - [Mutate Global Variable](threadingMutateGlobal.nim)
   - [Mutate Using Pointer (Mutate String)](threadingMutatePointer.nim)
   - [No Variable Mutation](threadingNoMutate.nim)
-  - [Threaded Server with Prompt](threadedServerWithPrompt.nim)
   - [Spawn - Example 1](spawnExample1.nim)
+  - [Spawn - Threadpool work queue](threadpoolWorkQueue.nim)
+  - [Threaded Server with Prompt](threadedServerWithPrompt.nim)
 
 ### Things of Note
 

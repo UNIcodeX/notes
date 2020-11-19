@@ -12,6 +12,8 @@
     - [Mutate Global Variable](Programming/Nim/Threading/threadingMutateGlobal.nim)
     - [Mutate Using Pointer (Mutate String)](Programming/Nim/Threading/threadingMutatePointer.nim)
     - [No Variable Mutation](Programming/Nim/Threading/threadingNoMutate.nim)
+    - [Spawn - Example 1](Programming/Nim/Threading/spawnExample1.nim)
+    - [Spawn - Threadpool work queue](Programming/Nim/Threading/threadpoolWorkQueue.nim)
     - [Threaded Server with Prompt](Programming/Nim/Threading/threadedServerWithPrompt.nim)
   - [Pointers and References](Programming/Nim/pointersAndReferences.nim)
   - Types
