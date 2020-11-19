@@ -33,7 +33,7 @@ proc worker() =
     var workItem : int
     withLock queueLock:
       if pQueue[].len > 0:
-        echo &"Thread# {thrID:5}: Work found. Taking one of the stack."
+        echo &"Thread# {thrID:5}: Work found. Taking one off the stack."
         workItem = pQueue[].pop
       else:
         discard
@@ -84,79 +84,79 @@ c
 Thread# 14484: Started.
 c
 Thread#  5232: Started.
-Thread# 14484: Work found. Taking one of the stack.
+Thread# 14484: Work found. Taking one off the stack.
 Thread# 14484: Processing work item with value => 7
 c
 Thread# 14944: Started.
-Thread#  5232: Work found. Taking one of the stack.
+Thread#  5232: Work found. Taking one off the stack.
 Thread#  5232: Processing work item with value => 6
-Thread# 14484: Work found. Taking one of the stack.
+Thread# 14484: Work found. Taking one off the stack.
 Thread# 14484: Processing work item with value => 5
-Thread# 14944: Work found. Taking one of the stack.
+Thread# 14944: Work found. Taking one off the stack.
 Thread# 14944: Processing work item with value => 4
-Thread#  5232: Work found. Taking one of the stack.
+Thread#  5232: Work found. Taking one off the stack.
 Thread#  5232: Processing work item with value => 3
-Thread# 14484: Work found. Taking one of the stack.
+Thread# 14484: Work found. Taking one off the stack.
 Thread# 14484: Processing work item with value => 2
-Thread# 14944: Work found. Taking one of the stack.
+Thread# 14944: Work found. Taking one off the stack.
 Thread# 14944: Processing work item with value => 1
-Thread#  5232: Work found. Taking one of the stack.
+Thread#  5232: Work found. Taking one off the stack.
 Thread#  5232: Processing work item with value => 7
-Thread# 14484: Work found. Taking one of the stack.
+Thread# 14484: Work found. Taking one off the stack.
 Thread# 14484: Processing work item with value => 6
-Thread# 14944: Work found. Taking one of the stack.
+Thread# 14944: Work found. Taking one off the stack.
 Thread# 14944: Processing work item with value => 5
-Thread#  5232: Work found. Taking one of the stack.
+Thread#  5232: Work found. Taking one off the stack.
 Thread#  5232: Processing work item with value => 4
-Thread# 14484: Work found. Taking one of the stack.
+Thread# 14484: Work found. Taking one off the stack.
 Thread# 14484: Processing work item with value => 3
-Thread# 14944: Work found. Taking one of the stack.
+Thread# 14944: Work found. Taking one off the stack.
 Thread# 14944: Processing work item with value => 2
-Thread#  5232: Work found. Taking one of the stack.
+Thread#  5232: Work found. Taking one off the stack.
 Thread#  5232: Processing work item with value => 1
-Thread# 14484: Work found. Taking one of the stack.
+Thread# 14484: Work found. Taking one off the stack.
 Thread# 14484: Processing work item with value => 7
-Thread# 14944: Work found. Taking one of the stack.
+Thread# 14944: Work found. Taking one off the stack.
 Thread# 14944: Processing work item with value => 6
-Thread#  5232: Work found. Taking one of the stack.
+Thread#  5232: Work found. Taking one off the stack.
 Thread#  5232: Processing work item with value => 5
-Thread# 14484: Work found. Taking one of the stack.
+Thread# 14484: Work found. Taking one off the stack.
 Thread# 14484: Processing work item with value => 4
-Thread# 14944: Work found. Taking one of the stack.
+Thread# 14944: Work found. Taking one off the stack.
 Thread# 14944: Processing work item with value => 3
-Thread#  5232: Work found. Taking one of the stack.
+Thread#  5232: Work found. Taking one off the stack.
 Thread#  5232: Processing work item with value => 2
-Thread# 14484: Work found. Taking one of the stack.
+Thread# 14484: Work found. Taking one off the stack.
 Thread# 14484: Processing work item with value => 1
-Thread# 14944: Work found. Taking one of the stack.
+Thread# 14944: Work found. Taking one off the stack.
 Thread# 14944: Processing work item with value => 7
-Thread#  5232: Work found. Taking one of the stack.
+Thread#  5232: Work found. Taking one off the stack.
 Thread#  5232: Processing work item with value => 6
-Thread# 14484: Work found. Taking one of the stack.
+Thread# 14484: Work found. Taking one off the stack.
 Thread# 14484: Processing work item with value => 5
-Thread# 14944: Work found. Taking one of the stack.
+Thread# 14944: Work found. Taking one off the stack.
 Thread# 14944: Processing work item with value => 4
-Thread#  5232: Work found. Taking one of the stack.
+Thread#  5232: Work found. Taking one off the stack.
 Thread#  5232: Processing work item with value => 3
-Thread# 14484: Work found. Taking one of the stack.
+Thread# 14484: Work found. Taking one off the stack.
 Thread# 14484: Processing work item with value => 2
-Thread# 14944: Work found. Taking one of the stack.
+Thread# 14944: Work found. Taking one off the stack.
 Thread# 14944: Processing work item with value => 1
 
 Add some more work
 A
-Thread#  5512: Work found. Taking one of the stack.
+Thread#  5512: Work found. Taking one off the stack.
 Thread#  5512: Processing work item with value => 7
-Thread#  8520: Work found. Taking one of the stack.
+Thread#  8520: Work found. Taking one off the stack.
 Thread#  8520: Processing work item with value => 6
-Thread# 15420: Work found. Taking one of the stack.
+Thread# 15420: Work found. Taking one off the stack.
 Thread# 15420: Processing work item with value => 5
-Thread# 15532: Work found. Taking one of the stack.
+Thread# 15532: Work found. Taking one off the stack.
 Thread# 15532: Processing work item with value => 4
-Thread# 14788: Work found. Taking one of the stack.
+Thread# 14788: Work found. Taking one off the stack.
 Thread# 14788: Processing work item with value => 3
-Thread#  5512: Work found. Taking one of the stack.
+Thread#  5512: Work found. Taking one off the stack.
 Thread#  5512: Processing work item with value => 2
-Thread#  8520: Work found. Taking one of the stack.
+Thread#  8520: Work found. Taking one off the stack.
 Thread#  8520: Processing work item with value => 1
 ]#
