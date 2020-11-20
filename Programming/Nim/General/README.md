@@ -1,6 +1,12 @@
+# Programming => Nim => Pointers and References
+
 ## Memory Structure
+  - [General Example](pointersAndReferences.nim)
+  - [Performance Comparison (Non-ARC vs ARC)](performanceNonARCvsARC.nim)
+    - [Results](#results-of-performance-comparison)
+      - Pointers and ref objects have similar performance, but ref objects are safer.
   - [See This](memoryStructure.nim)
-  - **NOTE:** Heap variables require pointers to be mutated when using threads.
+    - **NOTE:** Heap variables require pointers to be mutated when using threads (or ref objects when using ARC/ORC).
 ```
 ┌───────────┬─────────┬─────────────────────────────────────────┬──────────────┐
 │ data type │ address │ repr                                    │ stack / heap │
@@ -61,3 +67,44 @@
 
   -d:passC:-march=native  => Instruct the compiler to use the best optimizations for your CPU (may not be compatible with other CPUs)
   ```
+
+## Results of Performance Comparison
+
+### ARC
+
+```
+$ nim c -r --threads:on -d:release -d:lto --gc:arc
+
+Testing 100_000 iterations of regular object with copy
+2020-11-20T17:05:45-06:00 TimeIt: 100000 Repetitions on 6 seconds, 119 milliseconds, 967 microseconds, and 600 nanoseconds, CPU Time 6.119.
+
+Testing 100_000 iterations of direct mutation using pointer.
+2020-11-20T17:05:50-06:00 TimeIt: 100000 Repetitions on 4 seconds, 977 milliseconds, 301 microseconds, and 400 nanoseconds, CPU Time 4.978.
+
+Testing 100_000 iterations of direct mutation using reference object.
+2020-11-20T17:05:53-06:00 TimeIt: 100000 Repetitions on 3 seconds, 606 milliseconds, 399 microseconds, and 700 nanoseconds, CPU Time 3.606.
+
+100 - ((3.871 / 5.156) * 100) = 24.92242048
+```
+
+> ARC w/ptr => 18.64 % faster
+> ARC w/ref => 41.06 % faster
+
+### ORC
+```
+$ nim c -r --threads:on -d:release -d:lto --gc:orc
+
+Testing 100_000 iterations of regular object with copy
+2020-11-20T17:03:42-06:00 TimeIt: 100000 Repetitions on 3 seconds, 86 milliseconds, 220 microseconds, and 500 nanoseconds, CPU Time 3.086.
+
+Testing 100_000 iterations of direct mutation using pointer.
+2020-11-20T17:03:45-06:00 TimeIt: 100000 Repetitions on 2 seconds, 592 milliseconds, 353 microseconds, and 300 nanoseconds, CPU Time 2.592.
+
+Testing 100_000 iterations of direct mutation using reference object.
+2020-11-20T17:03:47-06:00 TimeIt: 100000 Repetitions on 2 seconds, 643 milliseconds, 999 microseconds, and 200 nanoseconds, CPU Time 2.644.
+
+100 - ((2.837 / 4.809) * 100) = 41.00644625
+```
+
+> ORC w/ptr => 16.01 % faster
+> ORC w/ref => 14.32 % faster
