@@ -30,16 +30,20 @@ proc worker() =
   echo &"Thread# {thrID:5}: Started."
   while true:
     sleep sleepTime
-    var workItem : int
+    var 
+      workItem : int
+      workToDo : bool
     withLock queueLock:
       if pQueue[].len > 0:
         echo &"Thread# {thrID:5}: Work found. Taking one off the stack."
         workItem = pQueue[].pop
+        workToDo = true
       else:
         discard
         # echo thrID, ": waiting for work."
-    if workItem != 0:
-      echo &"Thread# {thrID:5}: Processing work item with value => ", workItem
+    if workToDo:
+      echo &"Thread# {thrID:5}: Processing work item with value => {workItem:2}"
+      workToDo = false
       # Do something here
 
 echo """
@@ -55,8 +59,9 @@ while true:
     spawn worker()
   of "a":
     withLock queueLock:
-      pQueue[].add @[1,2,3,4,5,6,7,8,9,10]
+      pQueue[].add @[0,1,2,3,4,5,6,7,8,9,10]
   of "q":
+    echo "Exiting."
     quit()
 
 
@@ -66,7 +71,7 @@ while true:
 
 # withLock queueLock:
 #   for i in 0 .. 100:
-#     pQueue[].add @[1,2,3,4,5,6,7,8,9,10]
+#     pQueue[].add @[0,1,2,3,4,5,6,7,8,9,10]
 
 sync()
 
