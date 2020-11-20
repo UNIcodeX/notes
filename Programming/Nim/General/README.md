@@ -88,6 +88,7 @@ Testing 100_000 iterations of direct mutation using reference object.
 ```
 
 > ARC w/ptr => 18.64 % faster
+
 > ARC w/ref => 41.06 % faster
 
 ### ORC
@@ -107,4 +108,5 @@ Testing 100_000 iterations of direct mutation using reference object.
 ```
 
 > ORC w/ptr => 16.01 % faster
+
 > ORC w/ref => 14.32 % faster
